@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             when {
-                environment name: 'Dev', value: 'SeniorDev'
+                branch 'front-*'
             }
             steps {
                 echo "Deploying"
